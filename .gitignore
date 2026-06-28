@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Local-only overrides (secrets, machine-specific) — never commit these
+*.local
+.zshrc.local
+.gitconfig.local
+
+# Editor/OS noise
+*.swp
+*~
