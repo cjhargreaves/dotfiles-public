@@ -50,7 +50,11 @@ config.keys = {
   -- Close pane: ⌘W
   { key = "w", mods = "CMD", action = act.CloseCurrentPane({ confirm = true }) },
 
-  -- Navigate panes: ⌘⌥←/→/↑/↓
+  -- Cycle panes: ⌘[ previous, ⌘] next (iTerm behavior)
+  { key = "[", mods = "CMD", action = act.ActivatePaneDirection("Prev") },
+  { key = "]", mods = "CMD", action = act.ActivatePaneDirection("Next") },
+
+  -- Navigate panes by direction: ⌘⌥←/→/↑/↓
   { key = "LeftArrow",  mods = "CMD|OPT", action = act.ActivatePaneDirection("Left") },
   { key = "RightArrow", mods = "CMD|OPT", action = act.ActivatePaneDirection("Right") },
   { key = "UpArrow",    mods = "CMD|OPT", action = act.ActivatePaneDirection("Up") },
