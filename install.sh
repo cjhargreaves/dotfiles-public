@@ -14,7 +14,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 # All stowable packages (directories, minus git/meta)
-PACKAGES=(claude wezterm tmux vim)
+PACKAGES=(claude wezterm tmux vim zsh)
 
 if ! command -v stow >/dev/null 2>&1; then
   echo "GNU Stow is not installed. Install it with: brew install stow"

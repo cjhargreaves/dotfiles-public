@@ -9,3 +9,7 @@
 # Editor/OS noise
 *.swp
 *~
+
+# Python
+__pycache__/
+*.pyc
