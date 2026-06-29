@@ -1,35 +1,15 @@
 # dotfiles-public
 
-My personal config for zsh, WezTerm, vim, tmux, and Claude Code. Synced across
-machines with [GNU Stow](https://www.gnu.org/software/stow/).
+My configs, synced across machines with [GNU Stow](https://www.gnu.org/software/stow/).
 
-## zsh
+## What's here
 
-oh-my-zsh with the `agnoster` theme, so the prompt shows the path and git
-status. Opt/Alt arrows jump by word. Secrets and machine-specific stuff go in
-`~/.zshrc.local`, which isn't committed.
-
-## WezTerm
-
-Black background, white text, green block cursor. JetBrains Mono Nerd Font,
-16pt, DemiBold, hinting off. Keybindings match iTerm2/macOS: `⌘D` / `⌘⇧D` to
-split, `⌘T` for a tab, `⌘⌥arrows` to move between panes, `⌘1-9` to jump to a
-tab. Inactive panes dim.
-
-## Vim
-
-A small config for quick edits over SSH or when I don't want to load Neovim.
-Relative line numbers, 4-space indents, case-insensitive search unless I type a
-capital.
-
-## Neovim — not here
-
-My main editor lives in its own repo because it's a bigger setup (LSP via Mason,
-Telescope, Treesitter, nvim-tree, OneDark): [CollinJH/nvim](https://github.com/CollinJH/nvim).
-
-## Claude
-
-Claude Code skills I keep around, like the `ui-ux-pro-max` bundle.
+- **zsh** — `.zshrc` (oh-my-zsh, agnoster theme)
+- **WezTerm** — `.config/wezterm/wezterm.lua`
+- **tmux** — `.tmux.conf`
+- **vim** — `.vimrc`
+- **Neovim** — `.config/nvim` (packer; onedark, telescope, treesitter, nvim-tree, lualine, LSP via mason/lspconfig/lspsaga, nvim-cmp, toggleterm)
+- **Claude** — Claude Code skills (`ui-ux-pro-max` bundle)
 
 ## Install
 
