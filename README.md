@@ -1,45 +1,35 @@
 # dotfiles-public
 
-My personal environment. Not a starter kit, not a framework — just how I like
-my shell, my terminal, my editor, and my AI to behave. These are synced across
+My personal config for zsh, WezTerm, vim, tmux, and Claude Code. Synced across
 machines with [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## zsh
 
-oh-my-zsh with the `agnoster` theme — I want the prompt to tell me where I am
-and what git's doing without me asking. Word-jumping with `Opt`/`Alt` arrows
-because moving one character at a time is for people with more patience than me.
-Anything secret or machine-specific lives in `~/.zshrc.local`, which never
-leaves the laptop.
+oh-my-zsh with the `agnoster` theme, so the prompt shows the path and git
+status. Opt/Alt arrows jump by word. Secrets and machine-specific stuff go in
+`~/.zshrc.local`, which isn't committed.
 
 ## WezTerm
 
-Pure black background, white text, a green block cursor — high contrast, no
-theme cosplay. JetBrains Mono Nerd Font at 16pt, DemiBold, hinting off so it
-stays smooth. The keybindings pretend to be iTerm2/macOS so my muscle memory
-keeps working: `⌘D` / `⌘⇧D` to split, `⌘T` for a tab, `⌘⌥arrows` to hop between
-panes, `⌘1-9` to jump to a tab. Inactive panes dim themselves so I always know
-which one is live.
+Black background, white text, green block cursor. JetBrains Mono Nerd Font,
+16pt, DemiBold, hinting off. Keybindings match iTerm2/macOS: `⌘D` / `⌘⇧D` to
+split, `⌘T` for a tab, `⌘⌥arrows` to move between panes, `⌘1-9` to jump to a
+tab. Inactive panes dim.
 
 ## Vim
 
-The lightweight one, for quick edits over SSH or when I don't want to wake the
-whole Neovim machine. Relative line numbers, 4-space indents, smart search that
-only cares about case when I type a capital. Nothing fancy — it should open
-instantly and get out of the way.
+A small config for quick edits over SSH or when I don't want to load Neovim.
+Relative line numbers, 4-space indents, case-insensitive search unless I type a
+capital.
 
-## Neovim — not portable
+## Neovim — not here
 
-My real editor, but it doesn't live here. It's a full IDE-grade setup (LSP via
-Mason, Telescope, Treesitter, nvim-tree, OneDark) with enough moving parts that
-it gets its own repo and its own install dance: [CollinJH/nvim](https://github.com/CollinJH/nvim).
-Too opinionated and too dependency-heavy to pretend it's a simple symlink.
+My main editor lives in its own repo because it's a bigger setup (LSP via Mason,
+Telescope, Treesitter, nvim-tree, OneDark): [CollinJH/nvim](https://github.com/CollinJH/nvim).
 
 ## Claude
 
-Claude Code skills I actually keep around — the `ui-ux-pro-max` bundle and
-friends. This is the part of my environment that thinks, so I treat its config
-like any other dotfile.
+Claude Code skills I keep around, like the `ui-ux-pro-max` bundle.
 
 ## Install
 
@@ -50,12 +40,11 @@ cd ~/Side/dotfiles_public
 ./install.sh
 ```
 
-If a real file is already sitting where Stow wants a symlink, it'll stop and
-warn you — move the old file aside and re-run. To add a new dotfile, drop it
-into the matching package folder (mirroring its path under `$HOME`) and re-run
-`./install.sh <package>`.
+If a real file is already where Stow wants a symlink, it stops and warns you —
+move the old file aside and re-run. To add a dotfile, put it in the matching
+package folder (mirroring its path under `$HOME`) and run `./install.sh <package>`.
 
 ## Secrets
 
-Never commit secrets to a public repo. Machine-specific or sensitive values go
-in `~/.zshrc.local` and other `*.local` files, which are gitignored.
+Machine-specific or sensitive values go in `~/.zshrc.local` and other `*.local`
+files, which are gitignored.
