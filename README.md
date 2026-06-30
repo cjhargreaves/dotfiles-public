@@ -1,8 +1,6 @@
-# dotfiles-public
+# dotfiles
 
-My configs, synced across machines with [GNU Stow](https://www.gnu.org/software/stow/).
-
-## What's here
+## My configs for
 
 - zsh
 - WezTerm
